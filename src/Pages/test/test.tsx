@@ -1,4 +1,4 @@
-import TestPage from '../../component/specific/pay/_methods';
+import TestPage from '../Home';
 const Projects: React.FC = () => {
   return (
     <TestPage></TestPage>
