@@ -1,0 +1,118 @@
+/* style.css */
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0e0b16;
+    color: #e7dfdd;
+    overflow-x: hidden;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Sections */
+section {
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    perspective: 1000px;
+}
+
+section:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Portrait Image */
+.potrait-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.potrait-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Skill and Project Sections */
+.Skill_project_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.Skill_sub_section, .Project_sub_section, .Work-experience, .Combine_About_section, .Combine_payment_section {
+    position: relative;
+    perspective: 1000px;
+}
+
+.Skill_sub_section, .Project_sub_section, .About_sub_section, .Education_sub_section, .Qr_sub_section, .method_sub_section {
+    display: grid;
+    gap: 2rem;
+}
+
+/* 3D Tile Animation */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+section:hover::before {
+    opacity: 1;
+}
+
+/* Combine Sections */
+.Combine_About_section, .Combine_payment_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    color: #0ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Keyframes for glowing text */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .Skill_project_section, .Combine_About_section, .Combine_payment_section {
+        grid-template-columns: 1fr;
+    }
+}

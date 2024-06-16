@@ -1,0 +1,56 @@
+/* styles/globals.css */
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Body Styles */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(45, 45, 45, 1) 100%);
+  color: #fff;
+  overflow-x: hidden; /* Optional: Prevent horizontal scrollbar */
+}
+
+/* Hover Animation */
+a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0ff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Optional: Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0ff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(15, 15, 15, 0.5);
+}

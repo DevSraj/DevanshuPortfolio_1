@@ -1,0 +1,57 @@
+/* styles/skills.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.main-content {
+  background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(45, 45, 45, 1) 100%);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.main-content h1 {
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1px rgb(0, 255, 140), 0 0 2px rgb(0, 255, 183);
+}
+
+.skill-card {
+  background-color: rgba(15, 15, 15, 0.8);
+  border: 2px solid #0ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 240, 140, 0.8);
+}
+
+.skill-card h3 {
+  color: rgb(204, 239, 2);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 2px rgb(0, 17, 255);
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.skill-card li {
+  color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}

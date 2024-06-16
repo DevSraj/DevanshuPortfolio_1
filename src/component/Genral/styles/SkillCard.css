@@ -1,0 +1,64 @@
+/* styles/skillCard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.skill-card {
+  background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(45, 45, 45, 1) 100%);
+  border: 2px solid #0ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.skill-card h3 {
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card li {
+  color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.tile {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  animation: rotateTile 10s infinite linear;
+}
+
+.tile:nth-child(odd) {
+  background: rgba(159, 0, 255, 0.1);
+  border: 1px solid rgba(159, 0, 255, 0.2);
+}
+
+@keyframes rotateTile {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,62 @@
+/* Import Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #121212; /* Dark background for futuristic feel */
+  color: #ffffff; /* White text for high contrast */
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); /* Dark gradient with black */
+  border-top: 2px solid #ffd700; /* Golden border */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer Paragraph Styling */
+footer p {
+  color: #ffd700; /* Golden text */
+  font-size: 1.2rem;
+  text-shadow: 0 0 1px #ffd700, 0 0 2px #ffd700; /* Soft golden text shadow */
+  margin-bottom: 10px; /* Space below paragraph */
+}
+
+/* Interactive Link Styling */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px; /* Space above links */
+}
+
+.footer-links a {
+  color: #ffffff; /* White link text */
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid transparent; /* Invisible border */
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light grey on hover */
+  border-color: #ffd700; /* Golden border on hover */
+  transform: translateY(-3px); /* Move up slightly on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+  }
+
+  .footer-links a {
+    width: 100%; /* Full width for links */
+  }
+}

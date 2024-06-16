@@ -1,0 +1,84 @@
+/* Base styles */
+body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the ContactMeTile */
+.contactMeTile {
+  display: grid;
+  place-items: center;
+  height: auto;
+}
+
+.contactMeTile form, .thankYouMessage {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 2px rgba(0, 255, 204, 0.8);
+  transform: perspective(60px) rotateY(1deg);
+  animation: float 5s infinite;
+}
+
+.thankYouMessage {
+  text-align: center;
+  font-size: 1.2em;
+  color: #00ffcc;
+}
+
+.formGroup {
+  margin-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.1px;
+  color: #00ffcc;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00ffcc;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff00cc;
+  box-shadow: 0 0 1px rgba(255, 0, 204, 0.8);
+}
+
+.submitButton {
+  background: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submitButton:hover {
+  background: #ff00cc;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(255, 0, 204, 0.8);
+}
+
+/* 3D Float animation */
+@keyframes float {
+  0%, 100% {
+    transform: perspective(6000px) rotateY(1deg) translateY(0);
+  }
+  50% {
+    transform: perspective(6000px) rotateY(1deg) translateY(-1px);
+  }
+}

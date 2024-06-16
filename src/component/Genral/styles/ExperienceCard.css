@@ -1,0 +1,74 @@
+/* styles/experienceCard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.experience-card {
+  background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(45, 45, 45, 1) 100%);
+  border: 2px solid #0ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(123, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow:  0 0 10px rgba(125, 255, 125, 0.8), /* light green */
+  0 0 20px rgba(255, 15, 171, 0.8), /* light pink */
+  0 0 30px rgba(35, 35, 207, 0.8), /* dark blue */
+  0 0 40px rgba(3, 51, 62, 0.8);
+}
+
+.experience-card h3 {
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgb(1, 10, 10), 0 0 20px rgb(12, 0, 62);
+}
+
+.experience-card p {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.experience-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-card li {
+  color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.tile {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  animation: rotateTile 10s infinite linear;
+}
+
+.tile:nth-child(odd) {
+  background: rgba(159, 0, 255, 0.1);
+  border: 1px solid rgba(159, 0, 255, 0.2);
+}
+
+@keyframes rotateTile {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

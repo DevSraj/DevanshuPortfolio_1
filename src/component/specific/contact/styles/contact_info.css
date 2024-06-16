@@ -1,0 +1,66 @@
+/* Contact.css */
+
+body {
+  background-color: #1a1a1a;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactTile {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(145deg, #2b2b2b, #1f1f1f);
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out, background 0.3s ease-in-out;
+}
+
+.contactTile:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+  background: linear-gradient(145deg, #444, #2b2b2b);
+}
+
+.contactTile .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 1px #0ff);
+}
+
+.contactTile .title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #0ff;
+}
+
+.contactTile .additional-info {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #0ff, 0 0 1px rgb(251, 0, 255), 0 0 2px rgb(0, 255, 106); }
+  50% { box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px rgb(255, 0, 0); }
+  100% { box-shadow: 0 0 5px #0ff, 0 0 1px rgb(89, 0, 255), 0 0 2px #0ff; }
+}
+
+.contactTile:hover .icon {
+  animation: glowing 1.5s infinite alternate;
+}
+
+.contactTile:hover .title, .contactTile:hover .additional-info {
+  color: #fff;
+}

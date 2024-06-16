@@ -1,0 +1,70 @@
+/* styles/PayDonate.css */
+
+.pay-donate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+.methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  perspective: 10px;
+}
+
+.method {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.method img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+.method span {
+  display: block;
+  margin-top: 1px;
+  font-size: 1.2em;
+}
+
+.method:hover {
+  transform: rotateY(0.01deg) rotateX(0.1deg) scale(1.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.method:hover img {
+  transform: scale(1.2);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+}
+}
+.method {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.method:hover {
+  animation-play-state: paused;
+}

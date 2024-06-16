@@ -1,0 +1,113 @@
+/* Basic Header Styles */
+.header {
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Neon Glow Effect */
+.shadowNeon {
+  box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00, 0 0 80px #00ff00;
+}
+
+/* Navigation List Styles */
+.navList {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation Button Styles */
+.navButton {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Green Bottom Border Animation */
+.navButton:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00ff00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navButton:hover:before {
+  transform: scaleX(1);
+}
+
+/* Additional Styles for Techno + Gaming Theme */
+
+/* Neon Glow Effect on Hover */
+.navButton:hover {
+  color: #00ff00; /* Neon green */
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Green neon glow */
+}
+
+/* 3D Effect */
+.navButton {
+  perspective: 1000px;
+}
+
+.navButton:before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00ff00;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navButton:hover:before {
+  transform: rotateX(0);
+}
+
+/* Interactive Background Animation */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #00ff00 20%, transparent 70%);
+  transform: scale(1.5);
+  z-index: -1;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

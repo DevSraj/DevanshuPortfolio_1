@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+header {
+  background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(45, 45, 45, 1) 100%);
+  border-bottom: 2px solid #0ff;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+nav li button {
+  background: none;
+  border: none;
+  /* padding: 0; */
+  cursor: pointer;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 1px rgb(255, 254, 254), 0 0 2px rgb(201, 247, 243);
+  transition: transform 0.3s ease-in-out;
+}
+
+nav li button:hover {
+  color: #f7f7f7;
+  transform: translateY(-3px);
+}
+
+nav li button:active {
+  transform: translateY(0);
+}
+
+nav li link {
+  color: inherit;
+  text-decoration: none;
+}
+a{
+text-decoration: none;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(15, 255, 255, 0.1) 50%, transparent 100%);
+  transform: translateX(-50%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-50%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(100%);
+  }
+}

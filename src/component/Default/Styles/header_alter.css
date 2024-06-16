@@ -1,0 +1,53 @@
+
+/* Import Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); /* Dark gradient with black */
+  border-bottom: 2px solid #ffd700; /* Golden border */
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Navigation Styling */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+nav li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem; /* Slightly larger font size for emphasis */
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.5); /* Soft text shadow */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav li button:hover {
+  color: #ffd700; /* Golden yellow on hover */
+  transform: translateY(-3px) scale(1.05); /* Scale up slightly on hover */
+}
+
+nav li button:active {
+  transform: translateY(0);
+}
+
+/* Remove default link styling */
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
